@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #2a5ca6,
+    #4262ac,
+    #5568b2,
+    #666eb8,
+    #7674be
+  );
+  min-height: 100vh;
+  font-family: "JetBrains Mono", monospace;
+  color: white !important;
+}
+.day-time {
+  color: rgb(98, 237, 98);
+  font-weight: bold;
+}
+.doc-info {
+  background-color: rgba(0, 0, 0, 0.062);
+  border-radius: 10px;
+}
+.doctorMain img {
+  width: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.doctorMain img:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.3s;
+}
+.doctorMain img:hover + .doc-info {
+  margin-top: 15px;
+}
+
+.doctorMain {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  margin: auto;
+  gap: 1.5rem;
+}
+
+.appo-details {
+  background-color: rgba(0, 255, 255, 0.16);
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 50%;
+  padding: 1rem;
+}
+
+.consulted {
+  position: absolute;
+  top: 3px;
+  background-color: coral;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  left: -5px;
+  font-weight: bold;
+}
+.day-time {
+  position: relative;
+}
+
+.appo-bg {
+  background-image: url(../public/img/datelist.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.main {
+  margin: 20px auto;
+}
+.modal-body {
+  background-color: #2a5ca6;
+}
+.modal-header {
+  background-color: #2a5ca6;
+}
+
+@media (max-width: 950px) {
+  .doctorMain {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    margin: auto;
+    gap: 1rem;
+  }
+  .appo-details {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .doctorMain {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+    margin: auto;
+    gap: 1rem;
+  }
+  .appo-details {
+    width: 95%;
+  }
+  .doctorMain img {
+    width: 80%;
+    margin: auto;
+    display: flex;
+  }
+  .doctorname {
+    font-size: 1rem;
+  }
+  .patientname {
+    font-size: 1rem;
+    color: brown;
+  }
+  .appo-bg {
+    width: 90%;
+  }
+}
+.patientname {
+  color: brown;
+}
